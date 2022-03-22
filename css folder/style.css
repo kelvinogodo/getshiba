@@ -886,6 +886,9 @@ animate{
         margin-left: auto;
         cursor: pointer;
     }
+    .landpage{
+        overflow-x: hidden;
+    }
     nav{
         display: none;
     }
@@ -911,8 +914,8 @@ animate{
         width: 100%;
     }
     .btn-container button{
-        width: 200px;
-        padding: 0px 20p 0px 20px;
+        width: 50%;
+        border-radius: 5px;
     }
     .payment-section{
         height: auto;
@@ -942,6 +945,9 @@ animate{
     .blog-card:last-child{
         margin-right:0px ;
         
+    }.fixed{
+        height: 100%;
+        overflow: hidden;
     }
     .footer-contact{
         flex-direction: column;
