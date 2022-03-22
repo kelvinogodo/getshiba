@@ -792,6 +792,9 @@ animate{
     }
 }
 @media screen and (max-width: 767px){
+    body{
+        overflow-x: hidden;
+    }
       
     .menu-container{
         width: 60px;
@@ -909,6 +912,7 @@ animate{
     }
     .btn-container button{
         width: 200px;
+        padding: 0px 20p 0px 20px;
     }
     .payment-section{
         height: auto;
