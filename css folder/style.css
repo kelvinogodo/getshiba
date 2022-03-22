@@ -924,7 +924,9 @@ animate{
     .payment-card , .second{
         width: 85vw;
     }
-    
+    .payment-card .option-container li p{
+        color: rgb(209, 209, 209);
+    }
     .payment-card-container{
         height: auto;
         flex-wrap: wrap;
@@ -934,6 +936,17 @@ animate{
     }
     .nft-section a{
         margin-left: 0px;
+    }
+    .we-accept-section{
+        padding-top:30px ;
+        height: auto;
+    }
+    .we-accept-text-container{
+        height: auto;
+        width: 90%;
+    }
+    .we-accept-text-container p{
+        width: 100%;
     }
     .blog-section{
         flex-wrap: wrap;
