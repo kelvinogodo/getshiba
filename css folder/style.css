@@ -17,6 +17,7 @@ body{
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 h1{
     font-family: poppins,sans-serif;
@@ -905,6 +906,9 @@ animate{
     }
     .btn-container{
         width: 100%;
+    }
+    .btn-container button{
+        width: 200px;
     }
     .payment-section{
         height: auto;
