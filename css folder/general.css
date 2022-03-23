@@ -1,0 +1,58 @@
+.welcome-text-container{
+    width: 30%;
+}
+.landpage-card-container{
+    width: 60%;
+}
+.lanpage-form{
+    background-color: transparent;
+    padding-right: 40px;
+}
+.lanpage-form input{
+    width: 100%;
+}
+.landpage-card-container{
+    flex-direction: column;
+    
+}
+.landpage-card-container h1{
+    text-transform: capitalize;
+}
+.register-btn{
+    background-color: purple;
+    margin-right:auto ;
+}
+footer{
+    z-index: 4;
+}
+@media (max-width:1024px) and (min-width:768px){
+    .landpage{
+        flex-direction: column;
+    }
+    .landpage-card-container{
+        display: flex;
+        z-index: 4;
+    }
+    footer{
+        z-index: 4;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .landpage{
+        flex-direction: column;
+    }
+    .landpage-card-container{
+        display: flex;
+        z-index: 4;
+        width: 100%;
+       
+    }
+    .lanpage-form{
+        padding-right: 0px;
+        /* background-color: red; */
+    }
+    footer{
+        z-index: 4;
+    }
+}

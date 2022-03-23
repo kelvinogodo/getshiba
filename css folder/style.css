@@ -201,7 +201,9 @@ ul > li >a {
     padding: 50px 0px 0px 0px;
 }
 .payment-card{
+    border-radius: 10px;
     height: 380px;
+    max-height: auto;
     width: 300px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     margin: 25px;
@@ -214,13 +216,26 @@ ul > li >a {
     justify-content: center;
     flex-direction: column;
 }
+.payment-card h6{
+    height: auto;
+    font-weight: 400;
+    line-height: 25px;
+    width: 90%;
+    margin: auto;
+    font-size: 1rem;
+    font-family: roboto;
+    color: #ddd;
+}
 .label{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     position: absolute;
     right: 0;
     top: 0;
+}
+.upper{
+    margin-top: -20px;
 }
 .pay-circle{
     position: absolute;
@@ -262,7 +277,6 @@ ul > li >a {
 }
 .up{
     font-size: 1rem;
-    height: 100%;
     text-transform: capitalize;
 }
 .option-container{
@@ -272,6 +286,7 @@ ul > li >a {
     margin: 20px 0px 20px 0px;
     height: 30%;
 }
+
 .try-now-btn{
     height: 40px;
     padding: 5px 10px 5px 10px;
@@ -284,6 +299,9 @@ ul > li >a {
     font-family: poppins;
     letter-spacing: 1px;
     cursor: pointer;
+}
+.diff{
+    background-color:rgb(128, 0, 128) ;
 }
 .option-container li{
     list-style: none;
@@ -313,7 +331,26 @@ ul > li >a {
 }
 .second{
     background-color: rgb(56, 3, 53);
-    box-shadow: none;
+}.second img{
+    height: 80px ;
+    width: 80px;
+}
+.second a{
+    color: white;
+    text-decoration: none;
+    font-family: poppins;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    height:20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.second p{
+    width: 90%;
+    text-align: center;
+    color: rgb(200, 200, 200);
 }
 .nft-section{
     width: 90%;
@@ -329,7 +366,7 @@ ul > li >a {
 .nft-section h2{
     font-size: 1.5rem;
     font-family: poppins,sans-serif;
-    color: rgb(190, 190, 190);
+    color: white;
     text-transform: capitalize;
     width: 85%;
 }
@@ -352,6 +389,14 @@ ul > li >a {
     height: 100vh;
     top: 0;
     z-index: -1;
+    background-image: url(../images/2479574.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.541);
 }
 .fixed img{
     height: 100%;
@@ -366,6 +411,28 @@ ul > li >a {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+}
+.we-accept-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 20px 40px 20px;
+}
+.crypto-icon{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(52, 9, 58) ;
+    box-shadow: 0px 0px 10px black;
+    margin-right: 30px;
+ }
+.crypto-icon img{
+    height:40px ;
+    width: 40px;
+    object-fit: contain;
 }
 .we-accept-text-container{
     display: flex;
@@ -456,7 +523,7 @@ ul > li >a {
     margin-bottom: 10px;
 }
 footer{
-    background: linear-gradient(to bottom, rgb(238, 10, 238) 10%, rgb(105, 0, 105) 100%);
+    background: linear-gradient(to bottom, rgb(238, 10, 238) 10%, rgb(85, 1, 85) 100%);
     width: 100%;
 }
 
@@ -489,6 +556,7 @@ footer{
 }
 .form-container{
     width: 35%;
+    z-index: 2;
 }
 form{
     width: 100%;
@@ -500,6 +568,7 @@ form{
     justify-content: space-around;
     flex-direction: column;
     padding: 20px 0px 20px 0px;
+  
 }
 form h1{
     text-transform: capitalize;
@@ -599,6 +668,29 @@ button svg {
   transform: translateY(-0.1em);
  }
 }
+footer{
+    position: relative;
+    overflow:hidden ;
+}
+.footer-img{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    height: 500px;
+    width: 800px;
+    object-fit:cover;
+    margin-left: -450px;
+}
+/* .footer-img2{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: 800px;
+    object-fit:cover;
+    /* margin-right: -400px; 
+    margin-bottom: -100px;
+    transform: rotateX(300deg);
+} */
 .link-container{
     display: flex;
     align-items: center;
@@ -644,7 +736,7 @@ animate{
     margin-bottom: -50px;
 }
 
-@media (max-width:1000px) and (min-width:768px){
+@media (max-width:1024px) and (min-width:768px){
     
     .menu-container{
         width: 60px;
