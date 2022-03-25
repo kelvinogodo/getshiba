@@ -17,6 +17,79 @@
 }
 .landpage-card-container h1{
     text-transform: capitalize;
+    width: 100%;
+}
+.landpage-card-container p{
+    width: 100%;
+    color: rgb(189, 189, 189);
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+}
+.faq{
+    color: rgb(182, 182, 182);
+}
+.faq-container{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+.faq-item{   
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.question-container{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(108, 64, 139, 0.678);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.question{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    pointer-events: none;
+}
+.answer{
+    height: 0px;
+    overflow-y: hidden;
+    transition: all .5s ease-in-out;
+}
+.arrow-container{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.arrow{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+.arrow:hover{
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+.landpage-card-container a{
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: blue;
 }
 .register-btn{
     background-color: purple;
