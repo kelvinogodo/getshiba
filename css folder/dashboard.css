@@ -90,7 +90,7 @@ aside{
 }
 .info-wrapper{
     width: 80%;
-    padding: 10px;
+    padding: 10px 0px 10px 0px; 
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -98,7 +98,7 @@ aside{
     align-self: start;
 }
 .user-info-display{
-    height: 80px;
+    height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -109,6 +109,8 @@ aside{
     top: 0;
     z-index: 2;
     background-color: white;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
 .user-icon-container{
     padding-left: 20px;
@@ -117,7 +119,9 @@ aside{
     justify-content: space-around;
 }
 .hello-user{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: .9;
     font-family: poppins,sans-serif;
     padding-left: 20px;
     text-transform: capitalize;

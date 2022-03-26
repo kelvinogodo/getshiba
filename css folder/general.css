@@ -1,6 +1,11 @@
 .welcome-text-container{
     width: 30%;
 }
+.welcome-text-container img{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+}
 .landpage-card-container{
     width: 60%;
 }
@@ -65,6 +70,9 @@
     overflow-y: hidden;
     transition: all .5s ease-in-out;
 }
+.arrow{
+    object-fit: contain;
+}
 .arrow-container{
     width: 70px;
     height: 100%;
@@ -73,17 +81,7 @@
     justify-content: center;
     pointer-events: none;
 }
-.arrow{
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-}
-.arrow:hover{
-    transform: rotate(90deg);
-    cursor: pointer;
-    transition: all .2s ease-out;
-}
+
 .landpage-card-container a{
     text-decoration: none;
     margin-left: 10px;
@@ -114,16 +112,19 @@ footer{
 @media screen and (max-width: 767px){
     .landpage{
         flex-direction: column;
+        height: auto;
+    }
+    .welcome-text-container{
+        width: 80%;
+        height: 80%;
     }
     .landpage-card-container{
         display: flex;
         z-index: 4;
-        width: 100%;
-       
+        width: 100%;   
     }
     .lanpage-form{
         padding-right: 0px;
-        /* background-color: red; */
     }
     footer{
         z-index: 4;

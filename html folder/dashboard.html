@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>user dashboard</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="../css folder/dashboard.css">
 </head>
 <body>
@@ -13,12 +15,12 @@
             <div class="logo-container">
                 <h1>GetShiba</h1>
             </div>
-            <div class="link-container"><div class="bar"></div><img src="../images/4104800.png" alt="" class="icon"><a href="/home" class="dashboard-links">overview</a></div>
-           <div class="link-container"><div class="bar"></div><img src="../images/salary.png" alt="" class="icon"> <a href="/reinvest" class="dashboard-links">reinvest</a></div>
-           <div class="link-container"><div class="bar"></div><img src="../images/finance.png" alt="" class="icon"> <a href="/referrals" class="dashboard-links">referral</a></div>
-           <div class="link-container"><div class="bar"></div><img src="../images/b00b3270-c001-4c1c-88be-1fa129600aff-removebg-preview.png" alt="" class="icon"> <a href="/transactions" class="dashboard-links">transactions</a></div>
-           <div class="link-container"><div class="bar"></div><img src="../images/debit-card.png" alt="" class="icon"><a href="/plans" class="dashboard-links">plans</a></div>
-           <div class="link-container"><div class="bar"></div><img src="../images/shiba inu.png" alt="" class="icon"><a href="/accountInfo" class="dashboard-links">account info</a></div>   
+            <div class="link-container"><div class="bar"></div><img src="../images/4104800.png" alt="" class="icon"><a href="./dashboard.html" class="dashboard-links">overview</a></div>
+            <div class="link-container"><div class="bar"></div><img src="../images/salary.png" alt="" class="icon"> <a href="./reinvest.html" class="dashboard-links">reinvest</a></div>
+            <div class="link-container"><div class="bar"></div><img src="../images/finance.png" alt="" class="icon"> <a href="referrals.html" class="dashboard-links">referral</a></div>
+            <div class="link-container"><div class="bar"></div><img src="../images/b00b3270-c001-4c1c-88be-1fa129600aff-removebg-preview.png" alt="" class="icon"> <a href="transactions.html" class="dashboard-links">transactions</a></div>
+            <div class="link-container"><div class="bar"></div><img src="../images/debit-card.png" alt="" class="icon"><a href="plans.html" class="dashboard-links">plans</a></div>
+            <div class="link-container"><div class="bar"></div><img src="../images/shiba inu.png" alt="" class="icon"><a href="./accountinfo.html" class="dashboard-links">account info</a></div>   
         </aside>
         <div class="info-wrapper">
             <div class="user-info-display">
@@ -36,6 +38,119 @@
                 </div>
             </div>
             <div class="page-displayer">
+                <p class="header">overview</p>
+        <div class=" overview-container animate__animated animate__bounceInDown">
+            <div class="overview-card">
+                <h2>balance (shiba)</h2>
+                <p>0.001812637</p>
+            </div>
+            <div class="overview-card">
+                <h2>per hour (shiba)</h2>
+                <p>0.0018</p>
+            </div>
+            <div class="overview-card">
+                <h2>per day (shiba)</h2>
+                <p>0.0018127</p>
+            </div>
+            <div class="overview-card">
+                <h2>per week (shiba)</h2>
+                <p>0.00181246</p>
+            </div>
+        </div>
+        <div class="start-mining-container animate__animated animate__bounceInUp">
+            <header>
+                <p>start mining</p>
+                    <p class="upgrade">upgrade</p>    
+            </header>
+            
+            <div class="mining-info">
+                <div class="mining-plans">
+                    <div class="mining-plan-text-container">
+                        <p>plan [free]</p>
+                        <h2>upgrade your plan and step up your earns.</h2>
+                        <h4 class="amount">0.0018 ghs</h4>
+                        <button class="reset-plan-btn">boost your speed</button>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="want-to-earn-more">
+                
+                    <h3>want to earn more ?</h3>
+                    <p>upgrade your plan and step up your earns even up to 10,000 shiba per day </p>
+                    <button class="update-plan-btn">upgrade now</button>
+                </div>
+            </div>
+            <div class="my-plan-container">
+                <header>
+                    <p>my plans</p>
+                </header>
+                <div class="info-container">
+                    <p>plan</p>
+                    <p>status</p>
+                    <p>purchase date</p>
+                    <p>expiry date</p>
+                </div>
+                <div class="my-plan-card-container">
+                    <div class="my-plan-card">
+                        <p>free</p>
+                        <p>free</p>
+                        <p>free</p>
+                        <p>free</p>
+                        <p>free</p>
+                        <p>free</p>
+                    </div>   
+                    <div class="my-plan-card">
+                        <p>active </p>
+                        <p class="disabled">active </p>
+                        <p  class="disabled">active </p>
+                        <p  class="disabled">active </p>
+                        <p  class="disabled">active </p>
+                        <p  class="disabled">active </p>
+                    </div>
+                    <div class="my-plan-card">
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                    </div>
+                    <div class="my-plan-card">
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                        <p class="date">
+                            2022/09/04 03:20:67
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
             </div>
         </div>
     </section>

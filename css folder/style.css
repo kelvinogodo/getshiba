@@ -746,7 +746,7 @@ animate{
         justify-content: center;
         flex-direction: column;
         cursor: pointer;
-        z-index: 100;
+        z-index: 50;
     }
     .menu-line{
         height: 4px;
@@ -757,21 +757,44 @@ animate{
     }
     
     .menu-list{
-        width: 0%;
+        width: 100%;
         display: flex;
         position: fixed;
         top: 0;
         right: 0;
-        background:rgba(0, 0, 0, 0.897);
-        height: 100%;
+        background:white;   
+        height: 0%;
         z-index: 100;
-        overflow-x: hidden;
+        overflow-y: hidden;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        transition: .5s ease-in-out;
-        z-index: 200;
+        transition: .5s ease-in-out;    
     }
+    
+    .bar
+    {
+        height: 100%;
+        width: 5px;
+    }
+    .menu-list li:hover{
+        background-color: rgba(63, 1, 63, 0.692);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* padding-left: 15px; */
+        padding-right: 15px;
+       
+    }
+    .menu-list li:hover a{
+        color: white;
+    }
+    .menu-list li:hover
+    .bar{
+        background-color: rgb(227, 0, 235);
+        margin-right: 15px;
+    }
+    
     
     .list-items{
         width: 90%;
@@ -779,15 +802,15 @@ animate{
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        height: 60%;   
+        height: 60%;
+        padding-bottom: 40px;   
     }
     .menu-list li{
         width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-bottom: 2px solid rgba(17, 16, 16, 0.794);
-        padding-bottom: 10px;
+        padding: 5px;
     }
    
     .menu-list a{
@@ -798,7 +821,7 @@ animate{
         text-align: left;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: rgba(66, 1, 68, 0.83);
         text-decoration: none;
         text-transform: uppercase;
         font-size: 1rem;
@@ -817,7 +840,7 @@ animate{
         justify-content: space-between;
         height: 40%;
         overflow-x: hidden;
-        background-color: rgba(0, 0, 0, 0.897);
+        background-color: white;
         padding: 10px;
     }
     .close-btn{
@@ -896,7 +919,7 @@ animate{
         justify-content: center;
         flex-direction: column;
         cursor: pointer;
-        z-index: 200;
+        z-index: 50;
     }
     .menu-line{
         height: 4px;
@@ -907,21 +930,44 @@ animate{
     }
     
     .menu-list{
-        width: 0%;
+        width: 100%;
         display: flex;
         position: fixed;
         top: 0;
         right: 0;
-        background:rgba(0, 0, 0, 0.897);
-        height: 100%;
+        background:white;   
+        height: 0%;
         z-index: 100;
-        overflow-x: hidden;
+        overflow-y: hidden;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        transition: .5s ease-in-out;
-        z-index: 200;
+        transition: .5s ease-in-out;    
     }
+    
+    .bar
+    {
+        height: 100%;
+        width: 5px;
+    }
+    .menu-list li:hover{
+        background-color: rgba(63, 1, 63, 0.692);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* padding-left: 15px; */
+        padding-right: 15px;
+       
+    }
+    .menu-list li:hover a{
+        color: white;
+    }
+    .menu-list li:hover
+    .bar{
+        background-color: rgb(227, 0, 235);
+        margin-right: 15px;
+    }
+    
     
     .list-items{
         width: 90%;
@@ -929,15 +975,15 @@ animate{
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        height: 60%;   
+        height: 60%;
+        padding-bottom: 40px;   
     }
     .menu-list li{
         width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-bottom: 2px solid rgba(17, 16, 16, 0.794);
-        padding-bottom: 10px;
+        padding: 5px;
     }
    
     .menu-list a{
@@ -948,7 +994,7 @@ animate{
         text-align: left;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: rgba(66, 1, 68, 0.83);
         text-decoration: none;
         text-transform: uppercase;
         font-size: 1rem;
@@ -967,7 +1013,7 @@ animate{
         justify-content: space-between;
         height: 40%;
         overflow-x: hidden;
-        background-color: rgba(0, 0, 0, 0.897);
+        background-color: white;
         padding: 10px;
     }
     .close-btn{
