@@ -1,40 +1,26 @@
-let  sliders = document.querySelectorAll('.payment-card')
 
-
-
-window.addEventListener('scroll', ()=>{
-    sliders.forEach(slider =>{
-
-        // // let sliderHeight= slider.getBoundingClientRect('slider').top;
-        // let sliderHeight= window.screenY;
-        // let windowsHeight = window.innerHeight;
-
-        // if(windowsHeight  > sliderHeight){
-        //     // slider.classList.remove('animate');
-        //     console.log('im here')
-        // }
-
-    })
-});
 
 let faqItems = document.querySelectorAll('.faq-item');
+let closeBtns = document.querySelectorAll('.close-answer');
 
 faqItems.forEach(faqItem =>{
     faqItem.addEventListener('click',
+
      (e)=>{ 
 
         let answer = (e.target.children[1]);
 
-            answer.style.height = '150px'; 
-        
-              faqItem.addEventListener('click',()=>{
-                  if(answer.style.height ='150px'){
-                    answer.style.height = '0px';
-                  }
-                  else{
-                        answer.style.height = '150px'; 
-                }
-        }) 
+        hbjbnnanswer.style.height = 'auto'; 
+    });
+ })
+
+closeBtns.forEach(Btn =>{
+    Btn.addEventListener('click',
+
+     (e)=>{ 
+
+     (e.path[3].children[1]).style.height='0px';
+kghgho
     });
  })
 
@@ -87,18 +73,76 @@ faqItems.forEach(faqItem =>{
 //     window.location.path="/html%20folder/dashboard.html";   
 //  })
 
-// menu bar codes
 
 
-function OpenMenubar(){
-    const menuList=document.getElementById('menu-items');
-    menuList.style.height='80vh';   
+
+
+
+// menu bar codes for main pages
+
+const menuList=document.getElementById('menu-items');
+
+try {
+    
+    const OpenMenubar= (el,value) =>{
+        el.style.height =`${value}`;       
+    }
+
+    function CloseSideBar(el, value) {
+        el.style.height = `${value}`;
+
+    }
+
+    const menu = document.getElementById('menubar').addEventListener('click',()=>{
+        OpenMenubar(menuList,'80%');
+    });
+
+    const sidebar = document.getElementById('close-sidebar').addEventListener('click',()=>{
+        OpenMenubar(menuList,'0px');
+    });
+
+} 
+catch (error) {
 }
-function CloseSideBar(){
-    const menuList=document.getElementById('menu-items');
-    menuList.style.height='0px';
+
+
+// modal caller function 
+
+let CallModal= (element) => {
+    element.style.transform = 'scale(1)';
+};
+
+
+let closeModal= (element)=>{
+    element.style.transform = 'scale(0)';
 }
-const menu=document.getElementById('menubar');  
-menu.addEventListener('click',OpenMenubar);
-const sidebar=document.getElementById('close-sidebar');  
-sidebar.addEventListener('click',CloseSideBar);
+
+// profil edit modal 
+
+
+let profileSettingModal = document.querySelector('.profile-modal');
+document.querySelector('.user-icon').addEventListener(`click`, ()=>{   
+      
+    CallModal(profileSettingModal);
+    closeModal(notificationModal)
+    
+});
+
+// Notification modal 
+
+let notificationModal = document.querySelector('.notification-modal');
+document.querySelector('.notification').addEventListener(`click`, ()=>{   
+      
+    CallModal(notificationModal);
+    closeModal(profileSettingModal)
+});
+
+// close notification modal 
+
+document.querySelector('.close-notification').addEventListener('click', (e)=>{
+    closeModal(notificationModal)
+
+})
+document.querySelector('.close-profile').addEventListener('click', (e)=>{
+    closeModal(profileSettingModal)
+})

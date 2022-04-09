@@ -984,6 +984,7 @@ animate{
         align-items: center;
         justify-content: center;
         padding: 5px;
+        height: 20%;
     }
    
     .menu-list a{
@@ -1085,6 +1086,13 @@ animate{
     }
     .we-accept-text-container p{
         width: 100%;
+    }
+    .we-accept-icon-container{
+        flex-wrap: wrap;
+    }
+    .crypto-icon{
+        align-self: flex-start;
+        margin-top: 15px;
     }
     .blog-section{
         flex-wrap: wrap;
