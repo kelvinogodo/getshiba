@@ -7,7 +7,7 @@
     <title>user dashboard</title>
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="../css folder/dashboard.css">
+    <link rel="stylesheet" href="{{asset('data/css/dashboard.css')}}">
 </head>
 <body>
     <section class="dashboard-landpage">
@@ -15,19 +15,19 @@
             <div class="logo-container">
                 <h1>GetShiba</h1>
             </div>
-            <div class="link-container"><div class="bar"></div><img src="../images/overview.png" alt="" class="icon"><a href="./dashboard.html" class="dashboard-links">overview</a></div>
-            <div class="link-container"><div class="bar"></div><img src="../images/salary.png" alt="" class="icon"> <a href="./reinvest.html" class="dashboard-links">reinvest</a></div>
-            <div class="link-container"><div class="bar"></div><img src="../images/finance.png" alt="" class="icon"> <a href="referrals.html" class="dashboard-links">referral</a></div>
-            <div class="link-container"><div class="bar"></div><img src="../images/b00b3270-c001-4c1c-88be-1fa129600aff-removebg-preview.png" alt="" class="icon"> <a href="transactions.html" class="dashboard-links">transactions</a></div>
-            <div class="link-container"><div class="bar"></div><img src="../images/debit-card.png" alt="" class="icon"><a href="plans.html" class="dashboard-links">plans</a></div>
-            <div class="link-container"><div class="bar"></div><img src="../images/shiba inu.png" alt="" class="icon"><a href="./accountinfo.html" class="dashboard-links">account info</a></div>   
+            <div class="link-container"><div class="bar"></div><img src="{{asset('data/images/overview.png')}}" alt="" class="icon"><a href="{{route("dashboard")}}" class="dashboard-links">overview</a></div>
+            <div class="link-container"><div class="bar"></div><img src="{{asset('data/images/salary.png')}}" alt="" class="icon"> <a href="{{route("reinvest")}}" class="dashboard-links">reinvest</a></div>
+            <div class="link-container"><div class="bar"></div><img src="{{asset('data/images/finance.png')}}" alt="" class="icon"> <a href="{{route("referrals")}}" class="dashboard-links">referral</a></div>
+            <div class="link-container"><div class="bar"></div><img src="{{asset('data/images/b00b3270-c001-4c1c-88be-1fa129600aff-removebg-preview.png')}}" alt="" class="icon"> <a href="{{route("transactions")}}" class="dashboard-links">transactions</a></div>
+            <div class="link-container"><div class="bar"></div><img src="{{asset('data/images/debit-card.png')}}" alt="" class="icon"><a href="{{route("plans")}}" class="dashboard-links">plans</a></div>
+            <div class="link-container"><div class="bar"></div><img src="{{asset('data/images/shiba inu.png')}}" alt="" class="icon"><a href="{{route("accountinfo")}}" class="dashboard-links">account info</a></div>
         </aside>
         <div class="info-wrapper">
             <div class="user-info-display">
                 <h1 class="hello-user">hi, joshua</h1>
                 <div class="user-icon-container">
                     <div class="notification-icon-container">
-                        <img src="../images/profile1.jpg" alt="" class="user-icon ">
+                        <img src="{{asset('data/images/profile1.jpg')}}" alt="" class="user-icon ">
                         <div class="profile-modal">
                             <div class="close-profile">x</div>
                             <div class="change-password">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="profile-icon-container">
-                        <img src="../images/bell_notification.gif" alt="" class="user-icon notification">
+                        <img src="{{asset('data/images/bell_notification.gif')}}" alt="" class="user-icon notification">
                         <div class="notification-modal">
                             <header class="notification-header">
                                 <h2>notifications</h2>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     <div class="share-icon-container">
-                        <img src="../images/inbox.gif" alt="" class="user-icon">
+                        <img src="{{asset('data/images/inbox.gif')}}" alt="" class="user-icon">
                     </div>
                 </div>
             </div>
@@ -109,9 +109,9 @@
         <div class="start-mining-container animate__animated animate__bounceInUp">
             <header>
                 <p>start mining</p>
-                    <p class="upgrade">upgrade</p>    
+                    <p class="upgrade">upgrade</p>
             </header>
-            
+
             <div class="mining-info">
                 <div class="mining-plans">
                     <div class="mining-plan-text-container">
@@ -123,7 +123,7 @@
                     <img src="" alt="">
                 </div>
                 <div class="want-to-earn-more">
-                
+
                     <h3>want to earn more ?</h3>
                     <p>upgrade your plan and step up your earns even up to 10,000 shiba per day </p>
                     <button class="update-plan-btn">upgrade now</button>
@@ -147,7 +147,7 @@
                         <p>free</p>
                         <p>free</p>
                         <p>free</p>
-                    </div>   
+                    </div>
                     <div class="my-plan-card">
                         <p>active </p>
                         <p class="disabled">active </p>
@@ -203,6 +203,6 @@
             </div>
         </div>
     </section>
-    <script src="../js folder/main.js"></script>
+    <script src="{{asset('data/js/main.js')}}"></script>
 </body>
 </html>
