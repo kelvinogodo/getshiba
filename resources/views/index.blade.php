@@ -32,7 +32,7 @@
         </div>
         <ul class="list-items">
             <li class="li"><div class="bar"></div><a href="./index.html">home <img src="./images/arrow-24-xxl.png" alt="" class="arrow"> </a ></li>
-             <li class="li"><div class="bar"></div><a href="./html folder/login.html">login <img src="./images/arrow-24-xxl.png" alt="" class="arrow"></a></li>            
+             <li class="li"><div class="bar"></div><a href="./html folder/login.html">login <img src="./images/arrow-24-xxl.png" alt="" class="arrow"></a></li>
               <li class="li"><div class="bar"></div><a href="./html folder/register.html">reigster<img src="./images/arrow-24-xxl.png" alt="" class="arrow"></a></li>
              <li class="li"><div class="bar"></div><a href="./html folder/faqs.html">faqs<img src="./images/arrow-24-xxl.png" alt="" class="arrow"></a></li>
          </ul>
@@ -43,13 +43,13 @@
         <div class="menu-line"></div>
         <div class="menu-line"></div>
     </div>
-    
+
   </header>
     <section class="landpage">
-        
+
         <div class="welcome-text-container">
             <h1  class="animate__animated animate__flipInY">building world's firts most sustainable shib minner</h1>
-            <p class="animate__animated animate__backInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis 
+            <p class="animate__animated animate__backInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
                 illum neque aliquam minima maxime cumque sunt id expedita repellat
                  architecto voluptas iure rem voluptatum,
                 soluta saepe reprehenderit quas! In distinctio repellat autem deserunt?
@@ -64,7 +64,7 @@
         </div>
         <div class="landpage-card-container">
             <div class="landpage-card">
-                
+
             </div>
         </div>
     </section>
@@ -72,8 +72,8 @@
     <section class="payment-section">
         <div class="payment-section-text-container">
             <h1>payment plan<br> <span class="small-line"></span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis excepturi 
-                exercitationem animi voluptas earum beatae aspernatur saepe harum, et, 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis excepturi
+                exercitationem animi voluptas earum beatae aspernatur saepe harum, et,
                 quas pariatur accusamus odit minus voluptates! Laudantium velit asperiores
             </p>
         </div>
@@ -126,8 +126,8 @@
     <section class="payment-section">
         <div class="payment-section-text-container">
             <h1>getshiba features<br> <span class="small-line"></span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis excepturi 
-                exercitationem animi voluptas earum beatae aspernatur saepe harum, et, 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis excepturi
+                exercitationem animi voluptas earum beatae aspernatur saepe harum, et,
             </p>
         </div>
         <div class="payment-card-container">
@@ -163,7 +163,7 @@
         <div class="we-accept-text-container">
             <h1>we accept<br> <span class="small-line"></span></h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum ducimus maxime odi
-                 fuga sit illum quidem illo distinctio, sequi non nihil, 
+                 fuga sit illum quidem illo distinctio, sequi non nihil,
                 obcaecati animi blanditiis voluptas nulla, quasi assumenda possimus mollitia!
             </p>
         </div>
@@ -234,9 +234,39 @@
             <div class="form-container">
                 <form action="">
                     <h1>get in touch</h1>
-                    <input type="text" name="" id="" placeholder="NAME">
-                    <input type="email" name="" id="" placeholder="EMAIL">
-                    <textarea name="" id="" placeholder="message"></textarea>
+
+
+                    @if(session('success'))
+                <div class="alert alert-success">
+                  {{ session('success') }}
+                </div>
+                @endif
+
+            <form action="{{route('contact.store')}}" method="post" class="contact-form">
+                @csrf
+
+
+                <input id="" type="text" name="name" class="form-control" placeholder="" {{ old('name')}} required="required" data-error="Name is required.">
+
+
+
+                <input id="" type="email" name="email" class="form-control" placeholder="" {{ old('email')}} required="required" data-error="Valid email is required.">
+
+
+
+
+                <textarea id="" name="message" class="form-control" placeholder="" cols="30" {{old("message")}} rows="10" required="required" data-error="Please, leave me a message."></textarea>
+
+
+
+                @if ($errors->has('message'))
+                <div class="error">
+                   {{ $errors->first('message') }}
+                </div>
+                @endif
+
+
+
                     <button class="submit-btn">
                         <div class="svg-wrapper-1 ">
                           <div class="svg-wrapper">
