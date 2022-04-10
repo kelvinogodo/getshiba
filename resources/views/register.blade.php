@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="../css folder/style.css">
-    <link rel="stylesheet" href="../css folder/general.css">
-    <link rel="icon" href="../images/abstract_background_gradient_01.jpg">
+    <link rel="stylesheet" href="{{asset('data/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('data/css/general.css')}}">
+    <link rel="icon" href="{{asset('data/images/abstract_background_gradient_01.jpg')}}">
     <title>register</title>
 </head>
 <body>
@@ -19,23 +19,23 @@
         </div>
         <nav>
             <ul>
-                <li><a href="../index.html">home</a></li>
-                <li><a href="./login.html">login</a></li>
-                <li><a href="./register.html">register</a></li>
-                <li><a href="./faqs.html">FAQS</a></li>
+                <li><a href="{{route("index")}}">home</a></li>
+                <li><a href="{{route("login")}}">login</a></li>
+                <li><a href="{{route("register")}}">register</a></li>
+                <li><a href="{{route("faqs")}}">FAQS</a></li>
             </ul>
         </nav>
         <!-- this is the navigation sidebar for the mobile view -->
-  
+
         <div class="menu-list" id="menu-items">
           <div class="menu-list-login">
-               <img src="../images/1193.png" alt=""  id="close-sidebar" class="close-btn">
+               <img src="{{asset('data/images/1193.png')}}" alt=""  id="close-sidebar" class="close-btn">
           </div>
           <ul class="list-items">
-            <li class="li"><div class="bar"></div><a href="../index.html">home <img src="../images/arrow-24-xxl.png" alt="" class="arrow"> </a ></li>
-             <li class="li"><div class="bar"></div><a href="./login.html">login <img src="../images/arrow-24-xxl.png" alt="" class="arrow"></a></li>            
-              <li class="li"><div class="bar"></div><a href="./register.html">reigster<img src="../images/arrow-24-xxl.png" alt="" class="arrow"></a></li>
-             <li class="li"><div class="bar"></div><a href="./faqs.html">faqs<img src="../images/arrow-24-xxl.png" alt="" class="arrow"></a></li>
+            <li class="li"><div class="bar"></div><a href="{{route("index")}}">home <img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"> </a ></li>
+             <li class="li"><div class="bar"></div><a href="{{route("login")}}">login <img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"></a></li>
+              <li class="li"><div class="bar"></div><a href="{{route("register")}}">reigster<img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"></a></li>
+             <li class="li"><div class="bar"></div><a href="{{route("faqs")}}">faqs<img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"></a></li>
          </ul>
       </div>
       <!-- this is the code for the hamburger menu in the mobile view -->
@@ -44,17 +44,17 @@
           <div class="menu-line"></div>
           <div class="menu-line"></div>
       </div>
-      
+
     </header>
       <section class="landpage">
-          
+
           <div class="welcome-text-container">
-              <img src="../images/sign-concept-illustration_114360-5375-removebg-preview.png" alt="" class="animate__animated animate__bounceInUp">
+              <img src="{{asset('data/images/sign-concept-illustration_114360-5375-removebg-preview.png')}}" alt="" class="animate__animated animate__bounceInUp">
           </div>
           <div class="landpage-card-container">
             <h1 class="lanpage-form animate__animated animate__bounceInDown">register </h1>
             <form action="" class="lanpage-form animate__animated animate__bounceInDown">
-                
+
                 <input type="text" name="" id="" placeholder="ENTER YOUR FULL NAME">
                 <input type="text" name="" id="" placeholder="ENTER YOUR SHIBA WALLET ADDRESS">
                 <input type="password" name="" id="" placeholder="PASSWORD">
@@ -71,7 +71,7 @@
                     <span>Send</span>
                   </button>
             </form>
-            <p class="animate__animated animate__bounceInUp">already have an account ? <a href="./login.html">login</a></p>
+            <p class="animate__animated animate__bounceInUp">already have an account ? <a href="{{route("login")}}">login</a></p>
           </div>
       </section>
       <footer>
@@ -86,9 +86,37 @@
             <div class="form-container">
                 <form action="">
                     <h1>get in touch</h1>
-                    <input type="text" name="" id="" placeholder="NAME">
-                    <input type="email" name="" id="" placeholder="EMAIL">
-                    <textarea name="" id="" placeholder="message"></textarea>
+
+                    @if(session('success'))
+                    <div class="alert alert-success">
+                      {{ session('success') }}
+                    </div>
+                    @endif
+
+                <form action="{{route('contact.store')}}" method="post" class="contact-form">
+                    @csrf
+
+
+                    <input id="" type="text" name="name" class="form-control" placeholder="" {{ old('name')}} required="required" data-error="Name is required.">
+
+
+
+                    <input id="" type="email" name="email" class="form-control" placeholder="" {{ old('email')}} required="required" data-error="Valid email is required.">
+
+
+
+
+                    <textarea id="" name="message" class="form-control" placeholder="" cols="30" {{old("message")}} rows="10" required="required" data-error="Please, leave me a message."></textarea>
+
+
+
+                    @if ($errors->has('message'))
+                    <div class="error">
+                       {{ $errors->first('message') }}
+                    </div>
+                    @endif
+
+
                     <button class="submit-btn">
                         <div class="svg-wrapper-1 ">
                           <div class="svg-wrapper">
@@ -114,16 +142,16 @@
                 <li><a href="">sign in</a></li>
             </ul>
             <div class="social-media-handle">
-                <a href="#"><img src="../images/facebook.png" alt="" class="icon"></a>
-                <a href="#"><img src="../images/insta.png" alt="" class="icon"></a>
-                <a href="#"><img src="../images/whatsapp.png" alt="" class="icon"></a>
+                <a href="#"><img src="{{asset('data/images/facebook.png')}}" alt="" class="icon"></a>
+                <a href="#"><img src="{{asset('data/images/insta.png')}}" alt="" class="icon"></a>
+                <a href="#"><img src="{{asset('data/images/whatsapp.png')}}" alt="" class="icon"></a>
             </div>
         </div>
         <div class="long-line"></div>
         <p class="copywrite">&copy; copywrite 2022/ all rights reserved</p>
-        <img src="../images/Frame 2.png" alt="" class="footer-img">
+        <img src="{{asset('data/images/Frame 2.png')}}" alt="" class="footer-img">
         <!-- <img src="./images/Frame 2.png" alt="" class="footer-img2"> -->
     </footer>
-    <script src="../js folder/main.js"></script>
+    <script src="{{asset('data/js/main.js')}}"></script>
 </body>
 </html>

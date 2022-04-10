@@ -29,7 +29,7 @@
 
         <div class="menu-list" id="menu-items">
           <div class="menu-list-login">
-               <img src="../images/1193.png" alt=""  id="close-sidebar" class="close-btn">
+               <img src="{{asset('data/images/1193.png')}}" alt=""  id="close-sidebar" class="close-btn">
           </div>
           <ul class="list-items">
             <li class="li"><div class="bar"></div><a href="{{route("index")}}">home <img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"> </a ></li>
