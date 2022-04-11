@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="{{asset(data/css/style.css)}}">
+    <link rel="stylesheet" href="{{asset('data/css/style.css')}}">
     <link rel="icon" href="{{asset('data/images/abstract_background_gradient_01.jpg')}}">
     <title>getShiba.com</title>
 </head>
@@ -18,7 +18,7 @@
       </div>
       <nav>
           <ul>
-              <li><a href="#">home</a></li>
+              {{-- <li><a href="{{route("index")}}">home</a></li> --}}
               <li><a href="{{route("login")}}">login</a></li>
               <li><a href="{{route("register")}}">register</a></li>
               <li><a href="{{asset("faqs")}}">FAQS</a></li>
@@ -31,10 +31,10 @@
              <img src="{{asset('data/images/1193.png')}}" alt=""  id="close-sidebar" class="close-btn">
         </div>
         <ul class="list-items">
-            <li class="li"><div class="bar"></div><a href="{{route("index")}}">home <img src="{{asset(data/images/arrow-24-xxl.png)}}" alt="" class="arrow"> </a ></li>
-             <li class="li"><div class="bar"></div><a href="{{route("login")}}">login <img src="{{asset(data/images/arrow-24-xxl.png)}}" alt="" class="arrow"></a></li>
-              <li class="li"><div class="bar"></div><a href="{{route("register")}}">reigster<img src="{{asset(data/images/arrow-24-xxl.png)}}" alt="" class="arrow"></a></li>
-             <li class="li"><div class="bar"></div><a href="{{route("faqs")}}">faqs<img src="{{asset(data/images/arrow-24-xxl.png)}}" alt="" class="arrow"></a></li>
+            {{-- <li class="li"><div class="bar"></div><a href="{{route("index")}}">home <img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"> </a ></li> --}}
+             <li class="li"><div class="bar"></div><a href="{{route("login")}}">login <img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"></a></li>
+              <li class="li"><div class="bar"></div><a href="{{route("register")}}">reigster<img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"></a></li>
+             <li class="li"><div class="bar"></div><a href="{{route("faqs")}}">faqs<img src="{{asset('data/images/arrow-24-xxl.png')}}" alt="" class="arrow"></a></li>
          </ul>
     </div>
     <!-- this is the code for the hamburger menu in the mobile view -->
@@ -246,16 +246,20 @@
                 @csrf
 
 
-                <input id="" type="text" name="name" class="form-control" placeholder="" {{ old('name')}} required="required" data-error="Name is required.">
+                <input type="text" placeholder="input your name"{{ old('name')}} name="name" class="contact-input" id="">
+                @if ($errors->has('email'))
+                <div class="error">
+                    {{ $errors->first('email') }}
+              </div>
+            @endif
+
+
+                <input type="email" placeholder="enter email" {{ old('email')}} name="email" class="contact-input" id="email-input" required>
 
 
 
-                <input id="" type="email" name="email" class="form-control" placeholder="" {{ old('email')}} required="required" data-error="Valid email is required.">
 
-
-
-
-                <textarea id="" name="message" class="form-control" placeholder="" cols="30" {{old("message")}} rows="10" required="required" data-error="Please, leave me a message."></textarea>
+                <textarea name="message" id="text-area" cols="30" {{old("message")}} rows="10" class="text-area" placeholder="type your message here"></textarea>
 
 
 
@@ -264,6 +268,8 @@
                    {{ $errors->first('message') }}
                 </div>
                 @endif
+
+
 
 
                     <button class="submit-btn">

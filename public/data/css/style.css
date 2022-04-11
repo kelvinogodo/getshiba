@@ -568,7 +568,7 @@ form{
     justify-content: space-around;
     flex-direction: column;
     padding: 20px 0px 20px 0px;
-  
+
 }
 form h1{
     text-transform: capitalize;
@@ -687,7 +687,7 @@ footer{
     right: 0;
     width: 800px;
     object-fit:cover;
-    /* margin-right: -400px; 
+    /* margin-right: -400px;
     margin-bottom: -100px;
     transform: rotateX(300deg);
 } */
@@ -737,7 +737,7 @@ animate{
 }
 
 @media (max-width:1024px) and (min-width:768px){
-    
+
     .menu-container{
         width: 60px;
         height: 80%;
@@ -755,23 +755,23 @@ animate{
         background-color: white;
         margin: 3px;
     }
-    
+
     .menu-list{
         width: 100%;
         display: flex;
         position: fixed;
         top: 0;
         right: 0;
-        background:white;   
+        background:white;
         height: 0%;
         z-index: 100;
         overflow-y: hidden;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        transition: .5s ease-in-out;    
+        transition: .5s ease-in-out;
     }
-    
+
     .bar
     {
         height: 100%;
@@ -784,7 +784,7 @@ animate{
         justify-content: flex-start;
         /* padding-left: 15px; */
         padding-right: 15px;
-       
+
     }
     .menu-list li:hover a{
         color: white;
@@ -794,8 +794,8 @@ animate{
         background-color: rgb(227, 0, 235);
         margin-right: 15px;
     }
-    
-    
+
+
     .list-items{
         width: 90%;
         display: flex;
@@ -803,7 +803,7 @@ animate{
         justify-content: space-around;
         flex-direction: column;
         height: 60%;
-        padding-bottom: 40px;   
+        padding-bottom: 40px;
     }
     .menu-list li{
         width: 80%;
@@ -812,7 +812,7 @@ animate{
         justify-content: center;
         padding: 5px;
     }
-   
+
     .menu-list a{
         display: flex;
         align-items: flex-start;
@@ -887,7 +887,7 @@ animate{
     .blog-card:last-child{
         margin-top: 25px;
         margin-right:calc(100vw - 50%) ;
-        
+
     }
     .footer-contact{
         flex-direction: column;
@@ -910,7 +910,7 @@ animate{
     body{
         overflow-x: hidden;
     }
-      
+
     .menu-container{
         width: 60px;
         height: 80%;
@@ -928,23 +928,23 @@ animate{
         background-color: white;
         margin: 3px;
     }
-    
+
     .menu-list{
         width: 100%;
         display: flex;
         position: fixed;
         top: 0;
         right: 0;
-        background:white;   
+        background:white;
         height: 0%;
         z-index: 100;
         overflow-y: hidden;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        transition: .5s ease-in-out;    
+        transition: .5s ease-in-out;
     }
-    
+
     .bar
     {
         height: 100%;
@@ -957,7 +957,7 @@ animate{
         justify-content: flex-start;
         /* padding-left: 15px; */
         padding-right: 15px;
-       
+
     }
     .menu-list li:hover a{
         color: white;
@@ -967,8 +967,8 @@ animate{
         background-color: rgb(227, 0, 235);
         margin-right: 15px;
     }
-    
-    
+
+
     .list-items{
         width: 90%;
         display: flex;
@@ -976,7 +976,7 @@ animate{
         justify-content: space-around;
         flex-direction: column;
         height: 60%;
-        padding-bottom: 40px;   
+        padding-bottom: 40px;
     }
     .menu-list li{
         width: 80%;
@@ -986,7 +986,7 @@ animate{
         padding: 5px;
         height: 20%;
     }
-   
+
     .menu-list a{
         display: flex;
         align-items: flex-start;
@@ -1103,7 +1103,7 @@ animate{
     }
     .blog-card:last-child{
         margin-right:0px ;
-        
+
     }.fixed{
         height: 100%;
         overflow: hidden;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\ContactUs;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
@@ -45,9 +46,9 @@ class ContactUsController extends Controller
                 "subject" => "nullable|string",
                 "message" => "required|string",
             ]);
-
+            // Contact::create($data);
             //  Store data in database
-            ContactUsController::create($data);
+             Contact::create($data);
             //  Send mail to admin
             Mail::send('mail', array(
                 'name' => $request->name,
