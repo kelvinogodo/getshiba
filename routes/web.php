@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +15,13 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 
 
-Route::get("/dashboard", [HomeController::class, "dashboard"])->name("dashboard");
+Route::get("/", [HomeController::class, "index"])->name("index");
 Route::get("/accountinfo", [HomeController::class, "accountinfo"])->name("accountinfo");
 Route::get("/faqs", [HomeController::class, "faqs"])->name("faqs");
 Route::get("/login", [HomeController::class, "login"])->name("login");
@@ -29,8 +30,6 @@ Route::get("/referrals", [HomeController::class, "referrals"])->name("referrals"
 Route::get("/register", [HomeController::class, "register"])->name("register");
 Route::get("/reinvest", [HomeController::class, "reinvest"])->name("reinvest");
 Route::get("/transactions", [HomeController::class, "transactions"])->name("transactions");
-
-
-
-Route::resource("contact", ContactUsController::class);
+Route::post('contact-us', [HomeController::class, 'contactUs'])->name('contactUs');
+// Route::resource("contact", ContactUsController::class)->only(["store"]);
 

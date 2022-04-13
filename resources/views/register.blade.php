@@ -84,7 +84,6 @@
                 </p>
             </div>
             <div class="form-container">
-                <form action="">
                     <h1>get in touch</h1>
 
 
@@ -94,7 +93,7 @@
                 </div>
                 @endif
 
-            <form action="{{route('contact.store')}}" method="post" class="contact-form">
+            <form action="{{route('contactUs')}}" method="post" class="contact-form">
                 @csrf
 
 
@@ -122,7 +121,7 @@
                 @endif
 
 
-                    <button class="submit-btn">
+                    <button class="submit-btn" type="submit">
                         <div class="svg-wrapper-1 ">
                           <div class="svg-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">

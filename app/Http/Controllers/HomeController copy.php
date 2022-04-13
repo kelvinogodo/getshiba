@@ -6,7 +6,7 @@ use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class HomeController extends Controller
+class HomeControllerCopy extends Controller
 {
     public function login(){
         return view("login");
@@ -51,7 +51,7 @@ class HomeController extends Controller
 
     public function contactUs(Request $request)
     {
-        // dd($request->all());
+        dd($request->all());
         {
             $data =  $this->validate($request, [
                 "name" => "required|string",
@@ -73,8 +73,8 @@ class HomeController extends Controller
                 $message->to('emmanuelgodwin558@gmail.com', 'Admin')->subject($request->get('subject'));
             });
 
-
-            return redirect()->route('index')->with('success', 'We have received your message and would like to thank you for writing to us.');
+            session()->flash('success', 'Your message has been sent successfully');
+            return back();
         }
     }
 }

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
-use App\Models\ContactUs;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
@@ -38,7 +37,7 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
+        dd($request->all());
         {
             $data =  $this->validate($request, [
                 "name" => "required|string",
