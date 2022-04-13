@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", [HomeController::class, "index"])->name("index");
 Route::get("/accountinfo", [HomeController::class, "accountinfo"])->name("accountinfo");
+Route::get("/dashboard", [HomeController::class, "dashboard"])->name("dashboard");
 Route::get("/faqs", [HomeController::class, "faqs"])->name("faqs");
 Route::get("/login", [HomeController::class, "login"])->name("login");
 Route::get("/plans", [HomeController::class, "plans"])->name("plans");
