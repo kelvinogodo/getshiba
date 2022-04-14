@@ -13,7 +13,7 @@
     <section class="dashboard-landpage">
         <aside>
             <div class="logo-container">
-                <h1>GetShiba</h1>
+                <a href="{{ url('/') }}"> <h1>GetShiba</h1> </a>
             </div>
             <div class="link-container"><div class="bar"></div><img src="{{asset('data/images/overview.png')}}" alt="" class="icon"><a href="{{route("dashboard")}}" class="dashboard-links">overview</a></div>
             <div class="link-container"><div class="bar"></div><img src="{{asset('data/images/salary.png')}}" alt="" class="icon"> <a href="{{route("reinvest")}}" class="dashboard-links">reinvest</a></div>

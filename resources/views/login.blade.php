@@ -15,7 +15,7 @@
     <div class="landpage-circle animate__animated animate__swing"></div>
     <header>
         <div class="logo-container">
-            <h1>GetShiba</h1>
+            <a href="{{ url('/') }}"> <h1>GetShiba</h1> </a>
         </div>
         <nav>
             <ul>
