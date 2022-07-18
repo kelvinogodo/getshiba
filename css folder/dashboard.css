@@ -37,6 +37,20 @@ aside{
     justify-content: space-around;
     flex-direction: column;
 }
+.close-btn{
+    display: none;
+    padding: 15px;
+    font-family: poppins;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
 .logo-container{
     height: 20%;
     display: flex;
@@ -682,11 +696,53 @@ option:first-of-type{
     opacity: .7;
     text-transform: capitalize;
 }
+
+.menu-container{
+    display: none;
+}
+.menu-list{
+    width: 0%;
+    overflow-x: hidden;
+}
 @media (max-width:1024px) and (min-width:768px){
+    .menu-container{
+        width: 60px;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .close-btn{
+        display: block;
+        position: absolute;
+        top: 0%;
+        right: 0;
+    }
+    .menu-line{
+        height: 4px;
+        width: 35px;
+        border-radius: 5px;
+        background-color: black;
+        margin: 3px;
+    }
+    .close-btn{
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin-left: auto;
+        cursor: pointer;
+    }
 
     aside{
         width: 0px;
         overflow-x: hidden;
+        z-index: 30000;
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        height: 100vh;
     }
     .info-wrapper{
         width: 100%;
@@ -698,9 +754,37 @@ option:first-of-type{
 }
 
 @media screen and (max-width: 767px){
+    .menu-container{
+        width: 60px;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .menu-line{
+        height: 4px;
+        width: 35px;
+        border-radius: 5px;
+        background-color: black;
+        margin: 3px;
+    }
+    .close-btn{
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin-left: auto;
+        cursor: pointer;
+    }
     aside{
         width: 0px;
         overflow-x: hidden;
+        z-index: 3000;
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        height: 100vh;
     }
     .info-wrapper{
         width: 100%;

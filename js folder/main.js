@@ -26,54 +26,18 @@ kghgho
 
 
 
-//  let links =document.querySelectorAll('.dashboard-links');
-
-//  const route = (event)=>{
-//     event = event || window.event;
-//     event.preventDefault();
-//     window.history.pushState({},'',event.target.href);
-//     HandleLocation();
-//  }
- 
-
-//  const routes = {
-//      404:"../html folder/userhome.html",
-//      "/home":"../html folder/userhome.html",
-//      "/reinvest":"../html folder/reinvest.html",
-//      "/referrals":"../html folder/referrals.html",
-//      "/transactions":"../html folder/transactions.html",
-//      "/plans":"../html folder/plans.html",
-//      "/accountInfo":"../html folder/accountinfo.html",
-//  };
-
-// const HandleLocation = async ()=>{
-
-//     const path = window.location.pathname;
-
-//     const route = routes[path] || routes[404];
-    
-//     const html = await fetch(route).then((data)=> data.text());
-
-    
-//     document.querySelector(".page-displayer").innerHTML = html;
-
-// }
-
-//  links.forEach(link=>{
-//      link.addEventListener('click', route);
-//  })
-
-//  window.onpopstate = HandleLocation;
-
-//  window.route = route;
- 
-//  HandleLocation();
-
-//  window.onload(()=>{
-//     window.location.path="/html%20folder/dashboard.html";   
-//  })
-
-
+ function OpenMenubar(){
+    const menuList=document.getElementById('menu-items');
+    menuList.style.width='100%';
+}
+function CloseSideBar(){
+    const menuList=document.getElementById('menu-items');
+    menuList.style.width='0px';
+}
+const menu=document.getElementById('menubar');  
+menu.addEventListener('click',OpenMenubar);
+const sidebar=document.getElementById('close-sidebar');  
+sidebar.addEventListener('click',CloseSideBar);
 
 
 
